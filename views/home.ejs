@@ -1,0 +1,14 @@
+<%- include("partials/header"); -%>
+
+<h1>Home</h1>
+<p><%=homePara%></p>
+<h2>Go to /compose to add</h2>
+
+
+<% postsArray.forEach( function(posts){%>
+  <% console.log(posts.title)%>
+  <h1><%=posts.title%></h1>
+  <p><%=posts.content.substring(0,101)+ "..."%><a href="/posts/<%=posts.title%>">Read More</a></p>
+<% })%>
+
+<%- include("partials/footer"); -%>
